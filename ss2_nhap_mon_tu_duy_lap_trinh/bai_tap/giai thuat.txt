@@ -1,0 +1,69 @@
+bai 1 mô tả tính thuật toán trung bình
+
+ begin 
+     input  math , physics , chemistry
+     Average = (Math + Physics + Chemistry) / 3
+     display  avr
+  and.
+
+bai 2 mo ta thuat toan chuyen doi tien te
+ 
+ begin 
+     input usd
+     vnd = vnd*usd
+     display vnd
+ and.
+
+bai3
+ begin
+      input a ,b ,c
+       a= max 
+   if b> max then
+       b = max
+       and if
+  else if c> max then 
+        c= max 
+  and if 
+    display max
+and.
+ 
+bai 4
+
+begin
+           input  diem 
+         if diem > 75 then 
+         display A
+    else
+         if  diem >= 60 
+      display B
+   else
+       if diem >= 45
+       display C 
+   else
+      if >= 35
+       diplay D
+   else E
+and if
+and.
+
+bai 5 tim so lớn nhất trong dãy số
+
+    INPUT a1,a2,...an
+      max=a1
+       FOR i=2 TO n DO
+  IF ai>max THEN
+     max = ai
+  END IF
+      i=i+1
+      END FOR
+    DISPLAY max
+END
+
+
+
+
+
+
+ 
+
+

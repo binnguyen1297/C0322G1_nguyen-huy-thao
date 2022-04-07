@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<from>
+    <img id="myname" style="width: 600px" height="600px" src="https://cdnmedia.baotintuc.vn/Upload/EqV5H9rWgvy9oNikwkHLXA/files/2021/10/16102021-lich-thi-dau-4.jpg" alt="">
+    <p>Click button below to move the image to right </p>
+    <input type="button" value="Click me" onclick="moveRight()">
+</from>
+<script>
+  let  soccerstore = null
+  soccerstore = document.getElementById('myname')
+function init() {
+    soccerstore = document.getElementById('myname')
+    soccerstore.style.position = 'relative';
+    soccerstore.style.left ='0px'
+}
+function  moveRight() {
+    soccerstore.style.left = parseInt(soccerstore.style.left) + 10 + 'px'
+    window.onload = init;
+}moveRight();
+</script>
+</body>
+</html>

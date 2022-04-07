@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let phut = parseInt(prompt('so phut da goi'));
+    let cuocphi = 0;
+    if (phut >= 100) {
+        cuocphi = phut * 500;
+    } else if (phut >= 50) {
+        cuocphi = phut * 700
+    } else if (phut >= 20) {
+        cuocphi = phut * 1000
+    }
+    alert( " cuoc phi cua ban la: " +cuocphi)
+</script>
 </body>
 </html>

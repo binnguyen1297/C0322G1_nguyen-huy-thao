@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let doanhthu = parseInt(prompt('doanh thu usd '));
+    let hoahong = 0;
+    if (doanhthu >= 30000) {
+        hoahong = doanhthu * 0.25;
+    } else if (doanhthu >= 15000) {
+        hoahong = doanhthu * 0.2;
+    } else if (doanhthu >= 7000) {
+        hoahong = doanhthu * 0.15;
+    } else {
+        hoahong = doanhthu * 0.1;
+    }
+    alert(hoahong)
+</script>
 </body>
 </html>

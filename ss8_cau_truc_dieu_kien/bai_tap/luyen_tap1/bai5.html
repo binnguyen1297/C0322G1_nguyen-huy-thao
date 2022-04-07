@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+<script>
+let diemGiuaKi = parseFloat(prompt('nhap diem giua ki'));
+let diemCuoiKi = parseFloat(prompt('nhap diem cuoi ki'));
+let dtb = (diemGiuaKi + diemCuoiKi) / 2;
+if (dtb >= 8.5) {
+alert('gioi')
+} else if (dtb >= 6.5) {
+alert('kha');
+} else if (dtb < 6.5) {
+alert('trung binh')
+} else {
+alert('yeu')
+}
+</script>
 </body>
 </html>

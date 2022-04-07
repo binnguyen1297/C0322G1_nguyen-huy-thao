@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let  year = parseInt( prompt( "nam moi"));
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                alert(year + " nam nhuan ");
+            } else {
+                alert(year + " nam khong nhuan ");
+            }
+        } else {
+            alert(year + " nam nhuan");
+        }
+    } else {
+        alert(year + " nam khong  nhuan");
+    }
+</script>
 </body>
 </html>

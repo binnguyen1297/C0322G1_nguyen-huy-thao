@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let f = 0 ;
+    f0= 1; f1=1;
+    for (let i=0; i<20;i++){
+            f= f0+f1
+            f0 = f1
+            f1 = f
+            if(f%5===0){
+                document.write("So chia hết cho 5 trong dãy là " + f )
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

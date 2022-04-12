@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhietDo = parseInt(prompt("nhap vao nhiet do"));
+    while (nhietDo<20 || nhietDo>100){
+        if(nhietDo>100){
+            alert("giam nhiet do dieu hoa ")
+            nhietDo = parseInt(prompt("nhap vao nhiet do "));
+        }else if(nhietDo<20){
+            alert("tang nhiet do dieu hoa")
+            nhietDo = parseInt(prompt("nhap vao nhiet do"));
+        }
+    }
+    alert("nhiet do binh thuong");
+</script>
+</body>
+</html>

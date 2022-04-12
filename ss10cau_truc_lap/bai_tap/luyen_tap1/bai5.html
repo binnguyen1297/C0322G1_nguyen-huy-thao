@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let f = 0 ; f0 = 1 ; f1 = 1;
+    let tong = 0;
+    document.write(f0 +"<br>")
+    document.write(f1 +"<br>")
+     for ( let i = 0 ; i < 18 ; i ++ ) {
+         document.write(f + "<br>")
+         tong += f
+        f = f0 + f1
+         f0= f1
+         f1 = f
+     }
+    document.write("<br>" + tong)
+</script>
+</body>
+</html>

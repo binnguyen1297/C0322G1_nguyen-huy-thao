@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var N = prompt(" nhap gia tri  N ");
+    N = parseInt(N);
+    for (let i = 0; i < N; i++) {
+        for (let j = 0; j <= i; j++) {
+            document.writeln("$");
+        }
+        document.writeln("<br/>");
+    }
+    document.writeln("<br/>");
+
+
+    for (let i = 0; i < N; i++) {
+        for (let j = i; j < N; j++) {
+            document.writeln("$")
+        }
+        document.writeln("<br/>")
+    }
+    document.writeln("<br/>");
+
+
+</script>
+</body>
+</html>

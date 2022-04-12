@@ -5,23 +5,21 @@
     <title></title>
 </head>
 <body>
-<input type="text" class="" id="box"> <input type="text" class="" id=""> <br>
-
-<button onclick="" id="one" value="Addition(+)">addition(+)</button>
-<button onclick="" id="two" value="Subtraction(-)">subtraction(-)</button>
-<button onclick="" id="three" value="Multiplication(x)">multiplication(x)</button>
-<button onclick="" id=" for" value="Division(/)">division(/)</button>
+<!//<input type="text" id="number1"> <input type="text" id="number2"> <br>;
+<button onclick="tong('cong')" value="Addition(+)">addition(+)</button>
+<button onclick="tong('tru')" value="Subtraction(-)">subtraction(-)</button>
+<button onclick="tong('nhan')" value="Multiplication(x)">multiplication(x)</button>
+<button onclick="tong('chia')" value="Division(/)">division(/)</button>
+<span id="kq">hien thi</span>
 <script>
-    function tong() {
-        let ketqua = document.getElementById('ketqua')
-        let A = document.getElementById('one').value
-        let B = document.getElementById('two').value
-        let C = document.getElementById('three').value
-        let D = document.getElementById(' for').value
-        alert('ketqua' + A + B)
-
+    function tong(i) {
+        let kq = document.getElementById('ketqua')
+        let number1 = parseInt(document.getElementById('number1').value);
+        let number2 = parseInt(document.getElementById('number2').value);
 
     }
+
+
 </script>
 </body>
 </html>

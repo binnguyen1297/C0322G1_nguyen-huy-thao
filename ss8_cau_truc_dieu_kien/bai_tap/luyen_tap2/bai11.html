@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let thuNhapcanhan = parseInt(prompt('nhap thu nhap thang : '))
+
+    if (thuNhapcanhan > 80000000) {
+        let lan7 = thuNhapcanhan*0.35
+        document.write('lan7 = ' + lan7)
+    }else if (thuNhapcanhan> 52000000) {
+        let lan6 = thuNhapcanhan*0.3
+        document.write('lan6 = ' + lan6)
+    }else if (thuNhapcanhan> 32000000) {
+        let lan5 = thuNhapcanhan*0.25
+        document.write('lan5 = ' + lan5)
+    }else if (thuNhapcanhan> 18000000) {
+        let lan4 = thuNhapcanhan*0.2
+        document.write('lan4 = ' + lan4)
+    }else if (thuNhapcanhan> 10000000) {
+        let lan3 = thuNhapcanhan*0.15
+        document.write('lan3 = ' + lan3)
+    }else if (thuNhapcanhan> 5000000) {
+        let lan2 = thuNhapcanhan*0.1
+        document.write('lan2 = ' + lan2)
+    }else {
+        let lan1 = thuNhapcanhan*0.05
+        document.write('lan1 = ' +lan1)
+    }
+</script>
 </body>
 </html>

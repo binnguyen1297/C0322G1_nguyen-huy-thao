@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let diennangtieuthu = parseInt(prompt('điện năng tiêu thụ'));
+    if ( diennangtieuthu>200){
+   let lan1 = diennangtieuthu*2334
+       document.write('lan1 ='+ lan1)
+    } else if (diennangtieuthu>150){
+        let lan2 = diennangtieuthu* 1858
+        document.write('lan2 = ' + lan2)
+    } else if ( diennangtieuthu> 100){
+        let lan3 = diennangtieuthu*1600
+        document.write('lan3 = ' + lan3)
+    }
+    else { let lan4 =  diennangtieuthu*50
+    document.write('lan4 ='+ lan4)
+    }
+</script>
 </body>
 </html>

@@ -5,6 +5,29 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let min = parseInt(prompt("Trò chơi đoán số từ"))
+    let max = parseInt(prompt(" đến"))
+    let soRamdom;
+    soRamdom = Math.floor(Math.random() * (max - min + 1)) + min;
+    let flag = true;
+    let count = 0;
+    do {
+        let nhapso = parseInt(prompt("nhap vao so "))
+        if (nhapso === soRamdom) {
+            alert("Dung");
+            flag = false;
+        } else if (nhapso<soRamdom) {
+            alert("nhap so lon hon so vua nhap")
+        } else if (nhapso>soRamdom) {
+            alert("nhap be hon so vua nhap ")
+        } else {
+            count++;
+        }
+        if (count >= 3) {
+            flag = false;
+        }
+    } while (flag)
+</script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Từ Điển :</p>
+<input type="text" id="dictionary">
+<button value="tìm kiếm" onclick="tuDien()">Tìm Kiếm</button>
+<script>
+    function tuDien() {
+        let tuVietnamese = ["cho", "ga", "meo", "chim"];
+        let tujapanese = ["inu", "niwatori", "neko", "tori"];
+        let hienthi = "";
+        let input = document.getElementById('dictionary').value;
+        for (let i = 0; i < tuVietnamese.length; i++) {
+            if (tuVietnamese[i] === input) {
+                hienthi = tujapanese[i]
+                break
+            } else {
+                hienthi = 'not found'
+            }
+            if (tujapanese[i] === input) {
+                inRa = tuVietnamese[i]
+                break
+            } else {
+                hienthi = 'not found'
+            }
+        }
+        document.write(hienthi);
+    }
+</script>
+</body>
+</html>

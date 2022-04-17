@@ -5,21 +5,64 @@
     <title></title>
 </head>
 <body>
-<!//<input type="text" id="number1"> <input type="text" id="number2"> <br>;
-<button onclick="tong('cong')" value="Addition(+)">addition(+)</button>
-<button onclick="tong('tru')" value="Subtraction(-)">subtraction(-)</button>
-<button onclick="tong('nhan')" value="Multiplication(x)">multiplication(x)</button>
-<button onclick="tong('chia')" value="Division(/)">division(/)</button>
-<span id="kq">hien thi</span>
+<label for="number1">Nhập số 1: </label><input type="text" id="number1"/>
+<br/>
+<label for="number2">Nhập số 2: </label><input type="text" id="number2"/>
+<br/>
+<button onclick="tinhtoan('cong')" value="Addition(+)">addition(+)</button>
+<button onclick="tinhtoan('tru')" value="Subtraction(-)">subtraction(-)</button>
+<button onclick="tinhtoan('nhan')" value="Multiplication(x)">multiplication(x)</button>
+<button onclick="tinhtoan('chia')" value="Division(/)">division(/)</button>
+<br/>
+<label>Kết quả: </label><span id="ketqua"></span>
+<br/>
+<button onclick="ve()">Vẻ</button>
+<span id="hinh"></span>
 <script>
-    function tong(i) {
+    function tinhtoan(pheptinh) {
         let kq = document.getElementById('ketqua')
         let number1 = parseInt(document.getElementById('number1').value);
         let number2 = parseInt(document.getElementById('number2').value);
 
+        let ketqua = 0;
+
+        if (pheptinh === 'cong') {
+            ketqua = number1 + number2;
+        }
+        if (pheptinh === 'tru') {
+            ketqua = number1 - number2;
+        }
+
+        kq.innerText = ketqua;
     }
+</script>
+<script type="text/javascript">
+    function ve() {
+        debugger;
+        let hinh = document.getElementById('hinh')
+        //Hien thi dialog -> cho phep nhap gia tri cua N
+        var N = 10;
+        var M = 15;
+        //Chuyen kieu du lieu cua N tu string toi int
+        N = parseInt(N);
+        M = parseInt(M);
+        //xay dung do cao cua hinh tam giac
+        for (i = 0; i < N; i++) {
+            //tao hang (row) *
+            for (j = 0; j < M; j++) {
+                if (i === 0 || i === N - 1) {
+                    hinh.w(" * ");
+                } else if (j === 0 || j === M - 1) {
+                    hinh.writeln(" * ");
+                } else {
+                    hinh.writeln("   ");
+                }
+            }
 
-
+            //xuong dong khi hien thi ket qua cua tung hang
+            hinh.writeln("<br/>")
+        }
+    }
 </script>
 </body>
 </html>

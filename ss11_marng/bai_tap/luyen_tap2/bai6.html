@@ -6,7 +6,18 @@
 </head>
 <body>
 <script>
-
+    let a = prompt(" nhập vào mảng")
+    let str = [];
+    for (let k = 0; k<a.length; k++) {
+        str.push(a.charAt(k));
+    }
+    console.log(str);
+    document.write("Mảng ký tự ban đầu là : " + str  + "<br>");
+    for (let i = 0; i <str.length; i++){
+        if (str[i] === "-"){
+            str[i] = "_"
+        }
+    }document.write("Mảng mới " + str)
 </script>
 </body>
 </html>

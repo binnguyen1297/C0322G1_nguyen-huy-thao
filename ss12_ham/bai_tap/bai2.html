@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="bai2_css.css">
+</head>
+<body>
+<p>Feet And Meters</p>
+
+<label style="color: red">Feet: </label>
+<input type="number" placeholder="Enter the foot" oninput="meterToFeet(this.value)" style="background-color:">
+<p>Meter : <span id="outputFeet"></span></p>
+
+<label style="color: blue">Meter :</label>
+<input type="number" placeholder="Enter the meter" oninput="meterToMeter(this.value)">
+<p>Feet : <span id="outputMeter"></span></p>
+
+<script>
+    function meterToFeet(foot) {
+        foot = parseFloat(foot);
+        document.getElementById("outputFeet").innerHTML = foot * 0.305;
+    }
+    function meterToMeter(meter) {
+        meter = parseFloat(meter);
+        document.getElementById("outputMeter").innerHTML = meter * 3.279;
+    }
+</script>
+</body>
+</html>

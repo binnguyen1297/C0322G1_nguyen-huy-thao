@@ -1,0 +1,10 @@
+body{
+
+    margin: 0;
+    padding: 0;
+    background:#999999;
+}
+.lable{
+    top: 50%;
+    background:#FF99FF;
+}

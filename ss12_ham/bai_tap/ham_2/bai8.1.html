@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ function mang(newarr) {
+     let first = 0;
+     let last = newarr.length - 1;
+     while (first < last) {
+         let b = newarr[first];
+         newarr[first] = newarr[last];
+         newarr[last] = b;
+         first++;
+         last--;
+     }return newarr
+ }
+ let newarr= [1,3,2,4,5]
+ console.log(mang(newarr))
+</script>
+</body>
+</html>

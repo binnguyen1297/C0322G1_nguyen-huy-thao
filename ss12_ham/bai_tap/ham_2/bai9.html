@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemtra(arr, kytu) {
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === kytu) {
+                count++
+            }
+        }
+        if (count === 0) {
+            return -1
+        } else {
+            return count
+        }
+    }
+
+    arr = ["q", "g", "r", "d", "e", "p"]
+    arr1 = prompt("nhap ki tu")
+    let a = kiemtra(arr, arr1);
+    if (a === -1) {
+        alert(" khong co tronng mang")
+    } else {
+        alert("co  ton tai" + a)
+    }
+
+</script>
+</body>
+</html>

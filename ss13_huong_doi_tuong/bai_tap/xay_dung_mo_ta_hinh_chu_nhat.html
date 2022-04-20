@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="demoCanvas" width="500" height="600"></canvas> //Phần tử  trong HTML được sử dụng để vẽ đồ họa cho trang web.
+<script>
+    var canvas = document.getElementById("demoCanvas");
+    if ( canvas.getContext){
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle='green';// dùng để gán css
+        var  y=40 , h=300 , w=260;
+        for (var x =40; x!=140;x=x+10){
+            ctx.fillRect(x,y,h,w); // vẽ hình chữ nhật với tọa độ x,y chiều rộng chiều cao
+            ctx.clearRect(x+5,y+5,h-10,w-10);
+            // dùng moveto x,y điểm bắt đầu
+            y=y+10; //lineto x ,y định điểm kết thúc
+            h=h-20;// dùg hàm stroke vẽ đường thẳng
+            w=w-20;
+        }
+    }
+</script>
+</body>
+</html>

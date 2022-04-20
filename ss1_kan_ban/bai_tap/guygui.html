@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="display"></div>
+
+</body>
+</html>
+<script>
+    let sanPham = ["a", "b", "c", "d", "e", "f"]
+    let diaChi = ["DN", "QN", "HN", "SG", "Hue", "QT"]
+
+
+    let strTable = "<table border=\"1\">"
+    strTable += "<tr>"
+    strTable += "<th>ID</th>"
+    strTable += "<th>Ten</th>"
+    strTable += "<th>Dia chi</th>"
+    strTable += "<th>Xoa</th>"
+    strTable += "<th>Sua</th>"
+    strTable += "</tr>"
+    for (let i = 0; i < sanPham.length; i++) {
+        strTable += "<tr>"
+        strTable += "<td>" + i + "</td>"
+        strTable += "<td>" + sanPham[i] + "</td>"
+        strTable += "<td>" + diaChi[i] + "</td>"
+        strTable += "<td> <button type=\"submit\" onclick=''>Xoa</button> </td>"
+        strTable += "<td> <button type=\"submit\" onclick=''>Sua</button> </td>"
+        strTable += "</tr>"
+    }
+    strTable += "</table>"
+    document.getElementById("display").innerHTML = strTable
+</script>

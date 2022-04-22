@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>tạp chí siêu xe</h1>
+<div>
+    <button id="oop" onclick="them()"></button>
+</div>
+<p id="display"></p>
+<body>
+<script>
+    class Supecar {
+        constructor(ten, hang, mau, dongco,) {
+            this.ten = ten;
+            this.hang = hang;
+            this.mau = mau;
+            this.dongco = dongco;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        setHang(value) {
+            this.hang = value;
+        }
+
+        getMau() {
+            return this.mau;
+        }
+
+        setMau(value) {
+            this.mau = value;
+        }
+
+        getDongco() {
+            return this.dongco;
+        }
+
+        setDongco(value) {
+            this.dongco = value;
+        }
+    }
+
+    let arrsieuxe = []
+
+ function display(arr) {
+let noi ="<table border=\"1\">\n" +
+    "    <tr>\n" +
+    "        <td>stt</td>\n" +
+    "        <td>ten</td>\n" +
+    "        <td>hang</td>\n" +
+    "        <td>mau</td>\n" +
+    "        <td>dongco</td>\n" +
+    "        <td>chinhSua</td>\n" +
+    "        <td>xoa</td>\n" +
+    "    </tr>"
+     for (let i = 0; i <arr.length ; i++) {
+         noi += "<tr>" +
+             "<td>" +( i +1) + " </td>" +
+             "<td>" + arr[i].getTen() + "</td>" +
+             "<td>" + arr[i].getHang() + "</td>" +
+             "<td>" + arr[i] .getMau() + "</td>" +
+             "<td>" + arr[i].getDongco() + "</td>" +
+         "<td>"
+         "<button onclick='edit(" + i + ")'>Update</button>" +
+         "<button onclick='remove(" + i + ")'>Delete</button>" +
+         "</td>" +
+         "</tr>"
+     }
+      noi += "</table>"
+     document.getElementById(display).innerHTML= noi
+     display(arrsieuxe)
+ }
+    function them() {
+        let ten = prompt("Nhập tên xe: ");
+        let mau = prompt("Nhập màu xe: ");
+        let hang = prompt("Nhập hãng xe: ");
+        let dongco= prompt("nhập động cơ")
+        let newSieuxe = new  Supecar(ten, mau, hang,dongco);
+        arrsieuxe.push(newSieuxe);
+        display(arrsieuxe);
+        alert("Thêm mới thành công.");
+        them()
+    }
+</script>
+</body>
+</html>

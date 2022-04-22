@@ -6,11 +6,10 @@
 </head>
 <body>
 <div id="display"></div>
-
 </body>
 </html>
 <script>
-    let sanPham = ["a", "b", "c", "d", "e", "f"]
+    let sanPham = ["songhan", "hoian", "hoguom", "benthanh", "trangien", "thanhco"]
     let diaChi = ["DN", "QN", "HN", "SG", "Hue", "QT"]
 
 
@@ -21,6 +20,7 @@
     strTable += "<th>Dia chi</th>"
     strTable += "<th>Xoa</th>"
     strTable += "<th>Sua</th>"
+    strTable += "<th>them</th>"
     strTable += "</tr>"
     for (let i = 0; i < sanPham.length; i++) {
         strTable += "<tr>"
@@ -29,8 +29,10 @@
         strTable += "<td>" + diaChi[i] + "</td>"
         strTable += "<td> <button type=\"submit\" onclick=''>Xoa</button> </td>"
         strTable += "<td> <button type=\"submit\" onclick=''>Sua</button> </td>"
-        strTable += "</tr>"
-    }
+        strTable += "<td> <button type=\"submit\" onclick=''>them</button> </td>"
+        strTable += "</tr>"}
     strTable += "</table>"
+
     document.getElementById("display").innerHTML = strTable
+
 </script>

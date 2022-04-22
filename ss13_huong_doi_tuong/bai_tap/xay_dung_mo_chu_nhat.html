@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<html>
+<body>
+<script>
+    let a = parseFloat(prompt('nhập chiều dài'))
+    let b = parseFloat(prompt('nhập chiều rộng'))
+
+    class Rectanngle {
+        constructor(length , width ) {
+            this.length = length;
+            this.width = width;
+        }
+        getLength(){
+            return this.length;
+        }
+        getWidth(){
+            return this.width;
+        }
+        getArea(){
+            return this.width*this.length;
+        }
+        getPeri(){
+            return (this.width*this.length)/2 ;
+        }
+
+    }
+
+    let rectangle = new Rectangle(a, b)
+    let length = rectangle.getLength()
+    let width = rectangle.getWidth()
+    let area = rectangle.getArea()
+    let Peri = rectangle.getPeri()
+
+    console.log('area = '+ area + ' '+'Peri = ' + Peri)
+</script>
+</body>
+</html>

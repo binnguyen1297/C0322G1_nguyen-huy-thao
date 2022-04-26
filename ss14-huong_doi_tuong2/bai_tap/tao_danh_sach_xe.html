@@ -6,7 +6,7 @@
 </head>
 <h1>tạp chí siêu xe</h1>
 <div>
-    <button id="oop" onclick="them()"></button>
+    <button id="oop" onclick="them()">nhap</button>
 </div>
 <p id="display"></p>
 <body>
@@ -53,7 +53,7 @@
     }
 
     let arrsieuxe = []
-
+    display(arrsieuxe)
  function display(arr) {
 let noi ="<table border=\"1\">\n" +
     "    <tr>\n" +
@@ -79,8 +79,8 @@ let noi ="<table border=\"1\">\n" +
          "</tr>"
      }
       noi += "</table>"
-     document.getElementById(display).innerHTML= noi
-     display(arrsieuxe)
+     document.getElementById("display").innerHTML= noi
+
  }
     function them() {
         let ten = prompt("Nhập tên xe: ");
@@ -91,8 +91,19 @@ let noi ="<table border=\"1\">\n" +
         arrsieuxe.push(newSieuxe);
         display(arrsieuxe);
         alert("Thêm mới thành công.");
-        them()
+        display(arrsieuxe)
     }
+    // sửa thông tin đối tượng.
+    function edit(chinhsua) {
+        let ten = prompt("Nhập tên xe: ");
+        let mau = prompt("Nhập màu xe: ");
+        let hang = prompt("Nhập hãng xe: ");
+        let dongco = prompt("nhập động cơ")
+        arrsieuxe[chinhsua] = new Supecar(ten, mau, hang, dongco);
+alert("sua thanh cong")
+        display(arrsieuxe)
+    }
+
 </script>
 </body>
 </html>

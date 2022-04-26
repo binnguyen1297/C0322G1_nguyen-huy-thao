@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    let n = parseInt(prompt("Nhập số n: "));
+    let m = parseInt(prompt("Nhập số m: "));
+    let d = new Array(n);
+    for (let i = 0; i < n; i++) {
+        d[i] = new Array(m);
+    }
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            a[i][j] = parseInt(Math.random() * 100 + 1);
+        }
+    }
+    console.log(a);
+    let max = 0;
+    let min = a[0][0]
+
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+            if (a[i][j] > max) {
+                max = a[i][j]
+            }
+            if (a[i][j] < min) {
+                min = a[i][j]
+            }
+        }
+    }
+    console.log('giá trị lớn nhất : ' + max + '\n' + 'giá tri nhỏ nhất là : ' + min);
+</script>
+</body>
+</html>

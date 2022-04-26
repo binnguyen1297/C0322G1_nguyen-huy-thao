@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+let str = prompt('nhập chuỗi kí tự'); arr = str.split("")
+
+function demKyTu(arr) {
+   let count = 0;
+   for (let i = 0; i < arr.length ; i++) {
+       for (let j = i+1; j < arr.length ; j++) {
+           if (arr[i] === arr[j]) {
+              arr[i] = " ";
+                 break;
+             }
+         }
+     }
+    for (let i = 0; i < arr.length ; i++) {
+        if (arr[i] != " ") {
+             count++;
+        } }
+    return count;
+ }
+ alert(demKyTu(arr));
+
+</script>
+</body>
+</html>

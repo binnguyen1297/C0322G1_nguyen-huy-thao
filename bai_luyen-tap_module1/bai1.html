@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhapnhanvien = parseInt(prompt('nhap thu nhap thang : '))
+    if (thuNhapnhanvien > 15000000) {
+        let lan1 = thuNhapnhanvien*0.2;
+        document.write('lan1= ' + lan1);
+    }else if ( 7000000<thuNhapnhanvien< 15000000) {
+        let lan2 = thuNhapnhanvien*0.1;
+        document.write('lan2 = ' + lan2);
+    }else {
+        let lan3 = thuNhapnhanvien * 0.05;
+        document.write('lan3 = ' + lan3);
+    }
+</script>
+</body>
+</html>

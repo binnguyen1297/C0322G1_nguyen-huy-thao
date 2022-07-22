@@ -6,18 +6,29 @@
 </head>
 <body>
 <script>
-    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
-    let str = prompt("nhap vao ten sao");
-    alert(f(arr1,arr2,str));
+    // let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    // let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+    // let str = prompt("nhap vao ten sao");
+    // alert(f(arr1,arr2,str));
+    //
+    // function f(arr1, arr2, str) {
+    //     for (let i = 0; i < arr1.length; i++) {
+    //         if (str === arr1[i]) {
+    //             return arr2[i];
+    //         }
+    //     }
+    //     return "Sao khong ton tai!"
+    // }
 
-    function f(arr1, arr2, str) {
-        for (let i = 0; i < arr1.length; i++) {
-            if (str === arr1[i]) {
-                return arr2[i];
+    let arr = [ 1 ,2,3,4,]
+    let srt = prompt("nahp vao so ")
+    function nam(arr,str) {
+        for (let i = 0; i < arr.length; i++) {
+            if (str === arr[i]) {
+                alert("nam co ton tai" + str)
             }
         }
-        return "Sao khong ton tai!"
+        alert(" khong co trong mang")
     }
 </script>
 </body>

@@ -36,33 +36,33 @@
         kq.innerText = ketqua;
     }
 </script>
-<script type="text/javascript">
-    function ve() {
-        debugger;
-        let hinh = document.getElementById('hinh')
-        //Hien thi dialog -> cho phep nhap gia tri cua N
-        var N = 10;
-        var M = 15;
-        //Chuyen kieu du lieu cua N tu string toi int
-        N = parseInt(N);
-        M = parseInt(M);
-        //xay dung do cao cua hinh tam giac
-        for (i = 0; i < N; i++) {
-            //tao hang (row) *
-            for (j = 0; j < M; j++) {
-                if (i === 0 || i === N - 1) {
-                    hinh.w(" * ");
-                } else if (j === 0 || j === M - 1) {
-                    hinh.writeln(" * ");
-                } else {
-                    hinh.writeln("   ");
-                }
-            }
+<!--<script type="text/javascript">-->
+<!--    function ve() {-->
+<!--        debugger;-->
+<!--        let hinh = document.getElementById('hinh')-->
+<!--        //Hien thi dialog -> cho phep nhap gia tri cua N-->
+<!--        var N = 10;-->
+<!--        var M = 15;-->
+<!--        //Chuyen kieu du lieu cua N tu string toi int-->
+<!--        N = parseInt(N);-->
+<!--        M = parseInt(M);-->
+<!--        //xay dung do cao cua hinh tam giac-->
+<!--        for (i = 0; i < N; i++) {-->
+<!--            //tao hang (row) *-->
+<!--            for (j = 0; j < M; j++) {-->
+<!--                if (i === 0 || i === N - 1) {-->
+<!--                    hinh.w(" * ");-->
+<!--                } else if (j === 0 || j === M - 1) {-->
+<!--                    hinh.writeln(" * ");-->
+<!--                } else {-->
+<!--                    hinh.writeln("   ");-->
+<!--                }-->
+<!--            }-->
 
-            //xuong dong khi hien thi ket qua cua tung hang
-            hinh.writeln("<br/>")
-        }
-    }
-</script>
+<!--            //xuong dong khi hien thi ket qua cua tung hang-->
+<!--            hinh.writeln("<br/>")-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>

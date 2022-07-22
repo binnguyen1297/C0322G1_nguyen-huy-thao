@@ -10,6 +10,7 @@
 </div>
 <p id="display"></p>
 <body>
+<style ></style>
 <script>
     class Supecar {
         constructor(ten, hang, mau, dongco,) {
@@ -54,45 +55,46 @@
 
     let arrsieuxe = []
     display(arrsieuxe)
- function display(arr) {
-let noi ="<table border=\"1\">\n" +
-    "    <tr>\n" +
-    "        <td>stt</td>\n" +
-    "        <td>ten</td>\n" +
-    "        <td>hang</td>\n" +
-    "        <td>mau</td>\n" +
-    "        <td>dongco</td>\n" +
-    "        <td>chinhSua</td>\n" +
-    "        <td>xoa</td>\n" +
-    "    </tr>"
-     for (let i = 0; i <arr.length ; i++) {
-         noi += "<tr>" +
-             "<td>" +( i +1) + " </td>" +
-             "<td>" + arr[i].getTen() + "</td>" +
-             "<td>" + arr[i].getHang() + "</td>" +
-             "<td>" + arr[i] .getMau() + "</td>" +
-             "<td>" + arr[i].getDongco() + "</td>" +
-         "<td>"
-         "<button onclick='edit(" + i + ")'>Update</button>" +
-         "<button onclick='remove(" + i + ")'>Delete</button>" +
-         "</td>" +
-         "</tr>"
-     }
-      noi += "</table>"
-     document.getElementById("display").innerHTML= noi
 
- }
+    function display(arr) {
+        let noi = "<table border=\"1\">\n" +
+            "    <tr>\n" +
+            "        <td>stt</td>\n" +
+            "        <td>ten</td>\n" +
+            "        <td>hang</td>\n" +
+            "        <td>mau</td>\n" +
+            "        <td>dongco</td>\n" +
+            "        <td>chinhSua</td>\n" +
+            "        <td>xoa</td>\n" +
+            "    </tr>"
+        for (let i = 0; i < arr.length; i++) {
+            noi += "<tr>" +
+                "<td>" + (i + 1) + " </td>" +
+                "<td>" + arr[i].getTen() + "</td>" +
+                "<td>" + arr[i].getHang() + "</td>" +
+                "<td>" + arr[i].getMau() + "</td>" +
+                "<td>" + arr[i].getDongco() + "</td>" +
+                "<td><button onclick='edit(" + i + ")'>Update</button></td>" +
+                "<td><button onclick='remove(" + i + ")'>Delete</button></td>" +
+                "</tr>";
+        }
+        noi += "</table>"
+        document.getElementById("display").innerHTML = noi
+
+    }
+
     function them() {
         let ten = prompt("Nhập tên xe: ");
         let mau = prompt("Nhập màu xe: ");
         let hang = prompt("Nhập hãng xe: ");
-        let dongco= prompt("nhập động cơ")
-        let newSieuxe = new  Supecar(ten, mau, hang,dongco);
+        let dongco = prompt("nhập động cơ")
+        let newSieuxe = new Supecar(ten, mau, hang, dongco);
         arrsieuxe.push(newSieuxe);
         display(arrsieuxe);
         alert("Thêm mới thành công.");
         display(arrsieuxe)
     }
+
     // sửa thông tin đối tượng.
     function edit(chinhsua) {
         let ten = prompt("Nhập tên xe: ");
@@ -100,10 +102,21 @@ let noi ="<table border=\"1\">\n" +
         let hang = prompt("Nhập hãng xe: ");
         let dongco = prompt("nhập động cơ")
         arrsieuxe[chinhsua] = new Supecar(ten, mau, hang, dongco);
-alert("sua thanh cong")
+        alert("sua thanh cong")
         display(arrsieuxe)
     }
 
+    function remove(xoa) {
+        let ten = arrCar[xoa].getName();
+        let choose = confirm("Bạn có chắc chắn xóa: " + name);
+        if (choose) {
+            arrsieuxe.splice(xoa, 1);
+            alert("xóa thành công");
+        } else {
+            alert("lựa chọn cẩn thận");
+        }
+        display(arrsieuxe);
+    }
 </script>
 </body>
 </html>

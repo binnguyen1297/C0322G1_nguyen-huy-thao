@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Danh mục món ăn</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>Mã món</th>
+        <th>Tên món</th>
+        <th>Đơn giá</th>
+        <th>Chọn</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="col-id">12</td>
+        <td class="col-name">Ếch nướng mọi</td>
+        <td class="col-price">80000</td>
+        <td>
+            <button type="button" class="btn btn-success btn-choose">Chọn</button>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-id">13</td>
+        <td class="col-name">Bò cuộn phô mai</td>
+        <td class="col-price">80000</td>
+        <td>
+            <button type="button" class="btn btn-success btn-choose">Chọn</button>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-id">14</td>
+        <td class="col-name">Gà nướng muối ớt</td>
+        <td class="col-price">100000</td>
+        <td>
+            <button type="button" class="btn btn-success btn-choose">Chọn</button>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-id">15</td>
+        <td class="col-name">Hàu nướng mỡ hành</td>
+        <td class="col-price">120000</td>
+        <td>
+            <button type="button" class="btn btn-success btn-choose">Chọn</button>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-id">16</td>
+        <td class="col-name">Tôm nướng mỡ tỏi</td>
+        <td class="col-price">120000</td>
+        <td>
+            <button type="button" class="btn btn-success btn-choose">Chọn</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Block 2 -->
+<h2>Danh sách món trong hóa đơn</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Mã món</th>
+        <th>Tên món</th>
+        <th>Đơn giá</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+        <th>Lưu</th>
+        <th>Xóa</th>
+    </tr>
+    </thead>
+    <tbody id="bill-table">
+    <tr>
+        <td colspan="8" class="empty">Chưa chọn món</td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    (function() {
+
+        var index = 1;
+
+        $('.btn-choose').on('click', choose);
+        $('#bill-table').on('change keyup paste', '.bill-quantity', changeValue);
+
+        function choose() {
+            var self = this,
+                bill = $('#bill-table'),
+                data = getDataMenu($(self).parent().parent()),
+                html = createRow(data);
+
+            if (bill.find('.empty').length) {
+                bill.empty();
+            }
+
+            bill.append(html);
+        }
+
+        function changeValue() {
+            var self = this,
+                row = $(self).parent().parent(),
+                data = getDataBill(row);
+
+            row.find('.bill-total').html(calculate(data.price, data.quantity));
+        }
+
+        function getDataMenu(row) {
+            var id = $(row.find('.col-id')).html(),
+                name = $(row.find('.col-name')).html(),
+                price = $(row.find('.col-price')).html();
+
+            var data = {
+                id: id,
+                name: name,
+                price: price
+            }
+
+            return data;
+        }
+
+        function getDataBill(row) {
+            var price = $(row.find('.bill-price')).html(),
+                quantity = $(row.find('.bill-quantity')).val();
+
+            var data = {
+                price: price,
+                quantity: quantity
+            }
+
+            return data;
+        }
+
+        function createRow(data) {
+            var html = '<tr>';
+
+            html += '<td>' + index++ + '</td>';
+            html += '<td>' + data.id + '</td>';
+            html += '<td>' + data.name + '</td>';
+            html += '<td class="bill-price">' + data.price + '</td>';
+            html += '<td><input type="text" value="1" class="bill-quantity" /></td>';
+            html += '<td class="bill-total">' + calculate(data.price, 1) + '</td>';
+            html += '<td></td>';
+            html += '<td></td>';
+            html += '</tr>';
+
+            return html;
+        }
+
+        function calculate(price, quantity) {
+            return price * quantity;
+        }
+
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = parseFloat(prompt('nhap toa do x'));
+    let y = parseFloat(prompt('nhap toa do y'));
+    let r = parseFloat(prompt('nhap ban kinh'));
+    let mausac = prompt('nhap mau sac');
+    const Sopi = 3.14;
+
+    class Circle {
+        constructor(x, y, mausac, bankinh) {
+            this.bankinh = this.bankinh
+            this._x = x;
+            this._y = y;
+            this._mausac = mausac;
+            this._bankinh = bankinh;
+        }
+
+        get x() {
+            return this._x;
+        }
+
+        set x(value) {
+            this._x = value;
+        }
+
+        get y() {
+            return this._y;
+        }
+
+        set y(value) {
+            this._y = value;
+        }
+
+        get mausac() {
+            return this._mausac;
+        }
+
+        set mausac(value) {
+            this._mausac = value;
+        }
+
+        get bankinh() {
+            return this._bankinh;
+        }
+
+        set bankinh(value) {
+            this._bankinh = value;
+        }
+
+    }
+
+</script>
+</body>
+</html>

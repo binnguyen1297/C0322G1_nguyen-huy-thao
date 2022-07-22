@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Tạo mảng và viết hàm yêu cầu người dùng nhập 10 phần tử và in ra mảng.
+   // //Tao mang
+   //  //Ham tao mang
+   //  var intArray = [];
+   //  function creatArray(intArray) {
+   //      var n = prompt("Input the number of element for Array: "); //
+   //
+   //      for (var i = 0; i < n; i++) {
+   //          if (n <= 9) {
+   //              intArray[i] = prompt("Fill the value for Array " + i);
+   //          } else {
+   //              alert("Check for number of element again !");
+   //          }
+   //      }
+   //      //In gia tri cua phan tu cua mang
+   //      alert("Element of Array: " + intArray);
+   //  }
+   //
+   //  //
+   //  // function searchValue(intArray) {
+   //  //     var number = prompt("Input number for check: ");
+   //  //     var number = parseInt(number);
+   //  //     //   var check;
+   //  //     for (var i = 0; i < intArray.length; i++) {
+   //  //         if (number === intArray[i]) {
+    //             //   var check = true;
+    //             alert("Member of Array");
+    //         }
+    //     }
+    // }
+    / Create an integer array with 10 elements and the fill the data for this array.
+    // Write a function to print all member of array to screen
+
+    function createAndFillData(arr) {
+        for (var i = 0; i < 10; i++) {
+            arr[i] = i;
+        }
+    }
+
+    function printAllMemberOfArray(arr) {
+        for (var i = 0; i < 10; i++) {
+            console.log(arr[i]);
+        }
+    }
+
+    function main() {
+        var arr = [];
+        createAndFillData(arr);
+        printAllMemberOfArray(arr);
+    }
+    main()
+
+
+</script>
+</body>
+</html>

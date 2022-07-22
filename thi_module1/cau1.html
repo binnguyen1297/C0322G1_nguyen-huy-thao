@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let nhapdiemthi = parseInt(prompt(" nhap diem thi "));
+    for (let i = 0; i < nhapdiemthi; i++) {
+        arr[i] = parseInt(prompt("nhap diem"));
+    }
+    let maxdiemthi = findMax(arr);
+    document.write("diem thi cao nhat la" + maxdiemthi);
+
+    function findMax(arr) {
+        let max = [0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i]
+            }
+        }
+        return max;
+    }
+
+
+</script>
+</body>
+</html>
